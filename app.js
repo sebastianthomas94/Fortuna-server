@@ -13,7 +13,9 @@ var url = "mongodb://localhost/Fortuna";
 var signuprouter = require('./routes/signup');
 var loginrouter = require('./routes/login');
 var timerrouter= require('./routes/timer');
-//var datarouter = require('./routes/data');
+var datarouter = require('./routes/data');
+
+
 mongo.connect(url,function(err){
     if(err) 
     throw err;
@@ -42,7 +44,7 @@ app.use("/login", loginrouter);
 
 app.use("/timer", timerrouter);
 
-//app.use("/data", datarouter);
+app.use("/data", datarouter);
 
 
 

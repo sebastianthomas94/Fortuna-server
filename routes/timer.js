@@ -10,7 +10,7 @@ router.use(bodyparser.json());
 	
 	
 
-    var time={minutes:1,seconds:0, cooldown:false, cooldownTime:20, dice:0 , diceStatus:false };// timer seting
+    var time={minutes:0,seconds:10, cooldown:false, cooldownTime:5, dice:0 , diceStatus:false };// timer seting
 	 
 let timer=setInterval(counter,1000);
  function counter()								//Timer code_______
@@ -32,7 +32,7 @@ let timer=setInterval(counter,1000);
 	 {
 		 if(time.cooldownTime<=0)
 		 {
-			 time={minutes:1,seconds:0, cooldown:false, cooldownTime:20, dice:0 , diceStatus:false};// timer seting
+			 time={minutes:0,seconds:10, cooldown:false, cooldownTime:5, dice:0 , diceStatus:false};// timer seting
 		 }
 		 else
 		 time.cooldownTime--;

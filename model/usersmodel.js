@@ -8,7 +8,8 @@ var userSchema = new schema({
     mobile : Number,
     role : String,
     username : String,
-    password : String
+    password : String,
+	wallet: Number
 });
 
 var usersModel = mongo.model("users", userSchema);
